@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-gframe": "ng serve gframe --port 4201 --o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
