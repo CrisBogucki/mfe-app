@@ -11,7 +11,7 @@ Create [g]lobal [f]rame
 - `ng g application gframe --routing --style=scss`
 - `ng g c home --project gframe`
   - add routing
-    ``` json
+    ```
     {
     path: '',
     component: HomeComponent,
@@ -31,7 +31,7 @@ Create [l]ocal micro-app1
 - `ng g application l-micro-app1 --routing --style=scss`
 - `ng g m l-micro-app1 --routing --project=l-micro-app1`
   - add routing 
-  ``` json
+  ```
   {
     path: '',
     component: HomeComponent
