@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "start-gframe": "ng serve gframe --port 4201 --o",
+    "start-l-micro-app1": "ng serve l-micro-app1 --port 4202 --o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

@@ -4,12 +4,14 @@ MicroFrontEndApp
 
 ### Steps
 
+Create [g]lobal [f]rame
+
 - `ng new mfe-app --createApplication false`
 - `ng config cli.packageManager yarn`
 - `ng g application gframe --routing --style=scss`
-- `ng g c home --project=gframe`
+- `ng g c home --project gframe`
   - add routing
-    ```js
+    ``` json
     {
     path: '',
     component: HomeComponent,
@@ -24,4 +26,15 @@ MicroFrontEndApp
 - `npm install -g yarn`
 - `yarn install`
 
+Create [l]ocal micro-app1
 
+- `ng g application l-micro-app1 --routing --style=scss`
+- `ng g m l-micro-app1 --routing --project=l-micro-app1`
+  - add routing 
+  ``` json
+  {
+    path: '',
+    component: HomeComponent
+  }
+  ```
+- `ng g c home --project l-micro-app1`
