@@ -13,6 +13,10 @@
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
+  "resolutions": {
+    "webpack": "^5.4.0",
+    "license-webpack-plugin": "2.3.17"
+  },
   "dependencies": {
     "@angular-architects/module-federation": "12.1.1",
     "@angular/animations": "~11.2.10",

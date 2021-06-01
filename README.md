@@ -57,3 +57,12 @@ Add Module Federation
 - `ng add @angular-architects/module-federation --project l-micro-app1 --port 4202`   
   only for node v^12 || 14
   
+Add Webpack Config
+- in package.json
+  ```json
+  "resolutions": {
+  "webpack": "^5.4.0",
+  "license-webpack-plugin": "2.3.17"
+  },
+  ```
+  
