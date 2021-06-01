@@ -19,7 +19,7 @@ Create [g]lobal [f]rame
     }
     ```
   - create html
-    ```html
+    ```angular2html
     <h1>Welcome to gframe</h1>
     <router-outlet></router-outlet>
     ```
@@ -37,4 +37,23 @@ Create [l]ocal micro-app1
     component: HomeComponent
   }
   ```
+  - create html in app.conponent
+  ```angular2html
+  <h1>l-micro-app1 works!</h1>
+  
+  <a routerLink="/">Home by /</a> <br><br>
+  <a routerLink="l-micro-app1">Home by l-micro-app1</a>
+  <router-outlet></router-outlet>
+  ```
 - `ng g c home --project l-micro-app1`
+  - create html in home
+  ```angular2html
+  <h1>Home in l-micro-app1 works!</h1>
+  ```
+
+Add Module Federation
+
+- `ng add @angular-architects/module-federation --project gframe --port 4201` 
+- `ng add @angular-architects/module-federation --project l-micro-app1 --port 4202`   
+  only for node v^12 || 14
+  
