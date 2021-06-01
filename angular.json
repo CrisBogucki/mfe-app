@@ -1,0 +1,131 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "yarn"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "gframe": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/gframe",
+      "sourceRoot": "projects/gframe/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/gframe",
+            "index": "projects/gframe/src/index.html",
+            "main": "projects/gframe/src/main.ts",
+            "polyfills": "projects/gframe/src/polyfills.ts",
+            "tsConfig": "projects/gframe/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/gframe/src/favicon.ico",
+              "projects/gframe/src/assets"
+            ],
+            "styles": [
+              "projects/gframe/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/gframe/src/environments/environment.ts",
+                  "with": "projects/gframe/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "gframe:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "gframe:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "gframe:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gframe/src/test.ts",
+            "polyfills": "projects/gframe/src/polyfills.ts",
+            "tsConfig": "projects/gframe/tsconfig.spec.json",
+            "karmaConfig": "projects/gframe/karma.conf.js",
+            "assets": [
+              "projects/gframe/src/favicon.ico",
+              "projects/gframe/src/assets"
+            ],
+            "styles": [
+              "projects/gframe/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gframe/tsconfig.app.json",
+              "projects/gframe/tsconfig.spec.json",
+              "projects/gframe/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/gframe/e2e/protractor.conf.js",
+            "devServerTarget": "gframe:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "gframe:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "gframe"
+}
