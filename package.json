@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start-gframe": "ng serve gframe --port 4201 --o",
-    "start-l-micro-app1": "ng serve l-micro-app1 --port 4202 --o",
+    "start-gframe": "ng serve gframe --host=0.0.0.0 --port=4200 --o",
+    "start-l-app1": "ng serve l-app1 --host=0.0.0.0 --port=4201 --o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
