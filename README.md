@@ -9,6 +9,8 @@ Project of Concept micro frontend application
 * [Create l-app1](#create-lapp1)
 * [Add Module Federation](#add-mod-fed)
 * [Add Webpack Config in package.json](#add-webpack-config-in-packagejson)
+* [Run with docker](#run-with-docker)
+
 ### Create monorepo <a name="create-monorepo"></a>
   `ng new mfe-app --createApplication false`
   
@@ -103,6 +105,23 @@ in l-app1
   filename: "lApp1remoteEntry.js",
   exposes: {'./LApp1Module': './projects/l-app1/src/app/l-app1/l-app1.module.ts'}
 ```
+
+### Run with docker <a name="run-with-docker"></a>
+build
+
+  `docker build -t g-frame -f gframe-dockerfile .`
+
+  `docker build -t l-app1 -f lapp1-dockerfile .`
+
+run
+
+  `docker run -d -p 4200:80 g-frame`
+
+  `docker run -d -p 4201:80 l-app1`
+
+or
+
+  `docker-compose up -d`
 
 
   
