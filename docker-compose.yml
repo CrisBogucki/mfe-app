@@ -10,6 +10,8 @@ services:
       dockerfile: gframe-dockerfile
     ports:
       - "4200:80"
+    networks:
+      - frontend
 
   l-app1:
     hostname: l-app1
@@ -19,7 +21,10 @@ services:
       dockerfile: lapp1-dockerfile
     ports:
       - "4201:80"
+    networks:
+      - frontend
 
-
+networks:
+  frontend:
 
   # docker-compose up -d

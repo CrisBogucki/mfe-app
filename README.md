@@ -123,5 +123,7 @@ or
 
   `docker-compose up -d`
 
+![alt text](https://github.com/CrisBogucki/mfe-app/images/docker.png)
+
 
   
