@@ -86,4 +86,23 @@ Create html in app.component
     "license-webpack-plugin": "2.3.17"
     }
   ```
+
+### Add webpack config
+in g-frame
+```json5
+  remotes: { "lApp1": "lApp1@http://localhost:4201/lApp1remoteEntry.js"}
+```
+```json5
+  //add decl.d.ts in gframe/src/app
+  declare module 'lApp1/LApp1Module'
+```
+
+in l-app1
+```json5
+  name: "lApp1",
+  filename: "lApp1remoteEntry.js",
+  exposes: {'./LApp1Module': './projects/l-app1/src/app/l-app1/l-app1.module.ts'}
+```
+
+
   
