@@ -80,8 +80,8 @@ Create html in app.component
   only for node v^12 || 14
   
 ### Add Webpack Config in package.json <a name="add-webpack-config-in-packagejson"></a>
-  ```json
-    "resolutions": {
+  ```json5
+    "resolutions" : {
     "webpack": "5.27.2"
     "license-webpack-plugin": "2.3.17"
     }
