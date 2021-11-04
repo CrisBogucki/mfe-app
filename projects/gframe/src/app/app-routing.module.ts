@@ -1,23 +1,18 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
+import {buildRoutes} from "./utils/route-utils";
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     pathMatch: 'full'
-  },
-  {
-    path: 'lapp1',
-    loadChildren: () => import('lApp1/LApp1Module').then((m) => {
-        return m.LApp1Module;
-      }),
-  }
-];
+  }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(buildRoutes())],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

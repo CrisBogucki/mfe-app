@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Moja aplikacja",
+    "description": "Moja nowa apliakcja",
+    "version": "0.0.1",
+    "routePath": "lapp1",
+    "remote": {
+      "name": "lApp1",
+      "exposedModule": "LApp1Module",
+      "entryUrl": "http://localhost:4201/lApp1remoteEntry.js"
+    }
+  }
+]

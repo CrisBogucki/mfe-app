@@ -27,15 +27,8 @@ module.exports = {
         name: "lApp1",
         filename: "lApp1remoteEntry.js",
         exposes: {
-            './LApp1Module': './projects/l-app1/src/app/l-app1/l-app1.module.ts',
+            'LApp1Module': './projects/l-app1/src/app/l-app1/l-app1.module.ts',
         },
-
-        // For hosts (please adjust)
-        // remotes: {
-        //     "gframe": "gframe@http://localhost:4200/remoteEntry.js",
-
-        // },
-
         shared: {
           "@angular/core": { singleton: true, strictVersion: true },
           "@angular/common": { singleton: true, strictVersion: true },

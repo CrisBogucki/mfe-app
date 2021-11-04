@@ -1,4 +1,13 @@
 <h1>Welcome in Angular MFE G-Frame</h1>
 <a routerLink='/'>Main</a> &#160;
-<a routerLink='/lapp1'>Link to MFE</a>
-<router-outlet></router-outlet>
+<div>
+  <div *ngFor="let app of microApps" class="app" routerLink='{{app.path}}'>
+    <div>{{ app.name }}</div>
+    <div>{{ app.description }}</div>
+    <div>v.{{ app.version }}</div>
+  </div>
+</div>
+
+<div style="float: left">
+  <router-outlet></router-outlet>
+</div>

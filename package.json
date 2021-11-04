@@ -6,7 +6,9 @@
     "start": "ng serve",
     "start-gframe": "ng serve gframe --host=0.0.0.0 --port=4200 --o",
     "start-l-app1": "ng serve l-app1 --host=0.0.0.0 --port=4201 --o",
-    "build": "ng build",
+
+    "build-gframe": "ng build --prod --project=gframe",
+
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -27,6 +29,7 @@
     "@angular/platform-browser": "~11.2.10",
     "@angular/platform-browser-dynamic": "~11.2.10",
     "@angular/router": "~11.2.10",
+    "node-fetch": "^3.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
