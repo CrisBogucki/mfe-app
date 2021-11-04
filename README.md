@@ -12,7 +12,7 @@ Project of Concept micro frontend application
 * [Run with docker](#run-with-docker)
 
 ### Create monorepo <a name="create-monorepo"></a>
-  `ng new mfe-app --createApplication false`
+  `ng new mfe-app --create-application false`
   
   `ng config cli.packageManager yarn`
 
