@@ -1,13 +1,42 @@
-<h1>Welcome in Angular MFE G-Frame</h1>
-<a routerLink='/'>Main</a> &#160;
-<div>
-  <div *ngFor="let app of microApps" class="app" routerLink='{{app.path}}'>
-    <div>{{ app.name }}</div>
-    <div>{{ app.description }}</div>
-    <div>v.{{ app.version }}</div>
-  </div>
-</div>
+<h3 style="width: 98%; padding: 10px; background: #eeeeee; text-align: center">
+  Welcome to the world of microapplications for Angular framework and Federation Module
+</h3>
 
-<div style="float: left">
-  <router-outlet></router-outlet>
+<div style="float: left; width: 60%">
+
+  <div style="float: left; width: 100%">
+
+    <div>
+      <div class="app" routerLink='/'>
+        <div>Homepage</div>
+        <div>Home page of the g-frame component</div>
+        <div>v0.0.1</div>
+      </div>
+    </div>
+
+    <div>
+      <div *ngFor="let app of microApps" class="app" routerLink='{{app.path}}' routerLinkActive="active">
+        <div>{{ app.name }}</div>
+        <div>{{ app.description }}</div>
+        <div>v{{ app.version }}</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="float: left; border-top: 2px solid #eee; width: 100%">
+    <h3 style="width: 98%; padding: 10px;">
+      Miforoaplication rendering location
+    </h3>
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+<div style="float: left; width: 37%">
+  <h3 style="width: 98%; padding: 10px;">
+    Configuration JSON
+  </h3>
+    <pre style="width: 100%; border: 0" >
+      {{  microAppConfigJson | json }}
+    </pre>
 </div>

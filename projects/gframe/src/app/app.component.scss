@@ -2,9 +2,39 @@
   border: 1px solid #eee;
   padding: 20px;
   margin: 10px;
-  width: 150px;
-  box-shadow: 3px 0 0 #eee;
+  height: 70px;
+  width: 190px;
+  box-shadow: 3px 5px 5px #eee;
   font-family: Calibri, serif;
   font-size: 16px;
   float: left;
+  cursor: pointer;
+
+  &:hover{
+    box-shadow: 0 0 0 ;
+  }
+
+  div:nth-child(1){
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  div:nth-child(2){
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  div:nth-child(3){
+    font-weight: 600;
+    font-size: 13px;
+    text-align: right;
+  }
+
+
 }
+
+.active{
+  border: 1px solid cornflowerblue;
+}
+

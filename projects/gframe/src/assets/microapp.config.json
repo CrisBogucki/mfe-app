@@ -1,9 +1,20 @@
 [
   {
-    "name": "Moja aplikacja",
-    "description": "Moja nowa apliakcja",
+    "name": "Example1 micro-application",
+    "description": "Description of an exemplary micro-application",
     "version": "0.0.1",
     "routePath": "lapp1",
+    "remote": {
+      "name": "lApp1",
+      "exposedModule": "LApp1Module",
+      "entryUrl": "http://localhost:4201/lApp1remoteEntry.js"
+    }
+  },
+  {
+    "name": "Example2 micro-application",
+    "description": "Description of an exemplary micro-application",
+    "version": "0.0.2",
+    "routePath": "lapp2",
     "remote": {
       "name": "lApp1",
       "exposedModule": "LApp1Module",

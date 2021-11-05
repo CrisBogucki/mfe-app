@@ -9,11 +9,15 @@ import MicroAppConfigJson from "./../assets/microapp.config.json";
 })
 export class AppComponent implements OnInit {
 
-  title = 'gframe';
-
   microApps = [];
+  microAppConfigJson: any;
 
   ngOnInit() {
+    this.readJson();
+    this.microAppConfigJson = MicroAppConfigJson;
+  }
+
+  readJson(){
     this.microApps = MicroAppConfigJson.map((app) => ({
         name: app.name,
         description: app.description,
@@ -22,4 +26,6 @@ export class AppComponent implements OnInit {
       })
     );
   }
+
+
 }
